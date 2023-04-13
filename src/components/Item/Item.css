@@ -1,0 +1,71 @@
+.item {
+  position: relative;
+  width: 130px;
+  margin: 10px 10px;
+  text-decoration: none;
+  color: #2d2d2d;
+  display: flex-start;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .item {
+    width: 150px;
+  }
+}
+.item__img {
+  height: 195px;
+  width: 130px;
+  border-radius: 10px;
+}
+.item__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 25px 0px;
+  padding: 0 20px;
+}
+.item__title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 2px;
+  max-width: 100%;
+}
+.item__date {
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 0px;
+  max-width: 100%;
+}
+.item__exterior-circle {
+  position: absolute;
+  top: 180px;
+  left: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #052641;
+}
+.item__interior-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  background-color: #052641;
+}
+.item__vote {
+  color: white;
+  font-size: 8px;
+  font-weight: 700;
+  text-align: center;
+}
+.item__span {
+  font-size: 8px;
+  font-weight: 300;
+}/*# sourceMappingURL=Item.css.map */

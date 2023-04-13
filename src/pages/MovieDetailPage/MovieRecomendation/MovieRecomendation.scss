@@ -1,0 +1,28 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/media-queries.scss";
+.movie-rec {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  @include for-tablet-portrait-up {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__title {
+    padding: 15px;
+    margin: 0px;
+    font-weight: 700;
+    font-size: 24px;
+    color: $font-color-alternative;
+  }
+  &__wrapper {
+    overflow-x: scroll;
+  }
+  &__item {
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import "../../../styles/media-queries.scss";
+@import "../../../styles/variables.scss";
+
+.movie-cast {
+  border-bottom: 1px solid $font-color-grey;
+
+  &__title {
+    padding: 15px;
+    margin: 0px;
+    font-weight: 700;
+    font-size: 24px;
+    color: $font-color-alternative;
+    @include for-tablet-portrait-up {
+      padding: 15px;
+      font-weight: 700;
+      font-size: 24px;
+      color: $font-color-alternative;
+    }
+  }
+  &__principal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: start;
+      padding: 10px;
+    }
+  }
+  &__wrapper {
+    overflow-x: scroll;
+  }
+}

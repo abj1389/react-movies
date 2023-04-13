@@ -1,0 +1,114 @@
+.header {
+  width: 100vw;
+}
+.header__links {
+  padding: 20px 5px 15px 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #052641;
+}
+.header__links-pages {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .header__links-pages {
+    flex-direction: row;
+  }
+}
+.header__links-link {
+  padding-right: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+.header__links-link:hover {
+  text-decoration: underline;
+}
+.header__lang {
+  padding: 5px;
+}
+.header__lang-btn {
+  background: none;
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.header__lang-btn:hover {
+  background: white;
+  color: #052641;
+  border: none;
+  font-weight: 700;
+}
+.header__background {
+  position: relative;
+}
+.header__background-container-image {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .header__background-container-image {
+    height: 365px;
+    width: 1280px;
+    left: -380px;
+    top: 111px;
+    align-items: center;
+    justify-content: start;
+  }
+}
+.header__background-container {
+  height: 365px;
+  width: 1280px;
+  left: -60px;
+  top: 111px;
+}
+@media (max-width: 767px) {
+  .header__background-container {
+    height: 365px;
+    width: 1280px;
+    left: -480px;
+    top: 111px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header__background-text--first {
+  position: absolute;
+  left: 37px;
+  top: 15px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .header__background-text--first {
+    left: 37px;
+    top: 100px;
+  }
+}
+.header__background-text--second {
+  position: absolute;
+  left: 37px;
+  top: 80px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  padding-right: 10px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .header__background-text--second {
+    left: 37px;
+    top: 170px;
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=Header.css.map */

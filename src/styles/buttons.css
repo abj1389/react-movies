@@ -1,0 +1,46 @@
+.btn {
+  background-color: #052641;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 30px;
+  border-radius: 50px;
+  line-height: 1;
+}
+.btn:disabled, .btn[disabled] {
+  opacity: 0.3;
+}
+.btn--small {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.btn--big {
+  font-size: 18px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+}
+.btn--link {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #052641;
+}
+.btn__option {
+  color: #052641;
+  background-color: #eeeeee;
+}
+.btn__option--selected {
+  color: #052641;
+  font-weight: 600;
+  background-color: #ec9f57;
+}
+.btn__option--correct {
+  background-color: #54ec29;
+  color: white;
+  font-weight: 600;
+}
+.btn__option--wrong {
+  background-color: #f42a2a;
+  color: white;
+  font-weight: 600;
+}/*# sourceMappingURL=buttons.css.map */

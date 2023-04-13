@@ -1,0 +1,25 @@
+.rec-item {
+  text-decoration: none;
+  margin: 10px;
+}
+.rec-item__img {
+  width: 350px;
+  border-radius: 10px;
+}
+.rec-item__text {
+  width: 340px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #2d2d2d;
+  margin-bottom: 15px;
+}
+.rec-item__title {
+  margin: 0;
+  font-weight: 700;
+}
+.rec-item__score {
+  margin: 0;
+}/*# sourceMappingURL=RecomendationItem.css.map */

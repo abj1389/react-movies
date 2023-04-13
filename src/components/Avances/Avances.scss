@@ -1,0 +1,36 @@
+@import "../../styles/variables.scss";
+@import "../../styles/media-queries.scss";
+
+.discover {
+  background-color: $background-generic;
+  margin-top: 10px;
+
+  &__title {
+    color: $font-color-light;
+    padding: 15px;
+    margin: 0px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  &__wrapper {
+    overflow-x: scroll;
+    @include for-tablet-portrait-up {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 10px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__show-more {
+    background-color: $font-color-light;
+    color: $font-color-generic;
+    text-align: center;
+  }
+}

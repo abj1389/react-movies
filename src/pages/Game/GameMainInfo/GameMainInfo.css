@@ -1,0 +1,72 @@
+.game-main-info__detail {
+  background-color: #052641;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .game-main-info__detail {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+  }
+}
+.game-main-info__title {
+  padding: 15px 0px;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+.game-main-info__detail--title {
+  padding: 15px 0px;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .game-main-info__detail--title {
+    padding: 15px 0px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.game-main-info__img {
+  border-radius: 10px;
+  width: 250px;
+}
+.game-main-info__box-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-main-info__box-2 {
+  padding: 0px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .game-main-info__box-2 {
+    margin-left: 20px;
+  }
+}
+.game-main-info__main-info {
+  display: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: -10;
+}
+.game-main-info__release-date {
+  margin-top: 0;
+}
+.game-main-info__genre {
+  margin-top: 0;
+}
+.game-main-info__time {
+  margin-top: 0;
+}/*# sourceMappingURL=GameMainInfo.css.map */

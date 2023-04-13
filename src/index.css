@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.btn {
+  background-color: #052641;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 30px;
+  border-radius: 50px;
+  line-height: 1;
+}
+.btn:disabled, .btn[disabled] {
+  opacity: 0.3;
+}
+.btn--small {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+.btn--big {
+  font-size: 18px;
+  padding: 10px 25px;
+  text-transform: capitalize;
+}
+.btn--link {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #052641;
+}
+.btn--option-selected {
+  color: #052641;
+  font-weight: 600;
+  background-color: #ec9f57;
+  width: 290px;
+}
+.btn--option-correct {
+  background-color: #54ec29;
+  color: white;
+  font-weight: 600;
+  width: 290px;
+}
+.btn--option-wrong {
+  background-color: #f42a2a;
+  color: white;
+  font-weight: 600;
+  width: 290px;
+}
+.btn--option {
+  color: #052641;
+  background-color: #eeeeee;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #052641;
+  overflow-x: hidden;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  background: none;
+  font-family: "Poppins", sans-serif;
+}/*# sourceMappingURL=index.css.map */

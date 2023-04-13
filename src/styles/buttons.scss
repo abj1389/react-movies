@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+//btn btn--big btn__option game-page__button 
+
+.btn {
+  background-color: $background-generic;
+  color: $font-color-light;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 30px;
+  border-radius: 50px;
+  line-height: 1;
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.3;
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 50px;
+  }
+
+  &--big {
+    font-size: 18px;
+    padding: 10px 25px;
+    text-transform: capitalize;
+  }
+
+  &--link {
+    background-color: transparent;
+    text-decoration: underline;
+    color: $font-color-generic;
+  }
+
+  &__option {
+    color: $font-color-generic;
+    background-color: $font-color-grey;
+
+    &--selected {
+      color: $font-color-generic;
+      font-weight: 600;
+      background-color: $btn-selected;
+      
+    }
+  
+    &--correct {
+      background-color: $btn-correct;
+      color: $font-color-light;
+      font-weight: 600;
+      
+    }
+  
+    &--wrong {
+      background-color: $btn-wrong;
+      color: $font-color-light;
+      font-weight: 600;
+      
+    }
+  }
+  
+}
