@@ -3,9 +3,12 @@ import AvancesItem from "../AvancesItem/AvancesItem";
 import "./Avances.scss";
 import { usePagination } from "../../hooks/usePaginator";
 import { FormattedMessage } from "react-intl";
+import { LanguageSelector } from "../../App";
+import { useContext } from "react";
 
 const Avances = () => {
-  const API_URL = process.env.REACT_APP_API_URL + "/discover/movie?page=1&release_date.desc&vote_average.gte=5.5&api_key=" + process.env.REACT_APP_API_KEY;
+  const { language } = useContext(LanguageSelector);
+  const API_URL = process.env.REACT_APP_API_URL + "/discover/movie?page=1&release_date.desc&vote_average.gte=5.5&language=" + language + "&api_key=" + process.env.REACT_APP_API_KEY;
   const [discoverData] = useFetch(API_URL);
   const [firstMovies, showMoreMovies, theAreMore] = usePagination(discoverData?.results);
   console.log(discoverData);

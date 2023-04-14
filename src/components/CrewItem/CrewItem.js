@@ -3,11 +3,14 @@ import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { usePagination } from "../../hooks/usePaginator";
 import { FormattedMessage } from "react-intl";
+import { useContext } from "react";
+import { LanguageSelector } from "../../App";
 
 const CrewItem = () => {
   const { id } = useParams(":id");
   const { type } = useParams(":type");
-  const API_URL_CAST = process.env.REACT_APP_API_URL + "/" + type + "/" + id + "/credits" + "?api_key=" + process.env.REACT_APP_API_KEY;
+  const { language } = useContext(LanguageSelector);
+  const API_URL_CAST = process.env.REACT_APP_API_URL + "/" + type + "/" + id + "/credits&language=" + language + "?api_key=" + process.env.REACT_APP_API_KEY;
   const [personsData] = useFetch(API_URL_CAST);
   console.log(personsData);
   const [firstCrew, showMorePeople, theAreMore] = usePagination(personsData?.crew);

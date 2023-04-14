@@ -1,19 +1,20 @@
 import "./GamePage.scss";
 import { generateRandom, formatDate, formatGenres, formatTime } from "../../utils/utils";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import { FormattedMessage } from "react-intl";
 import { ImFilm } from "react-icons/im";
 import useFetch from "../../hooks/useFetch";
+import { LanguageSelector } from "../../App";
 
 const GamePage = () => {
   const [nameSelected, setNameSelected] = useState();
   const [gameIsSolved, setGameIsSolved] = useState(false);
-  // const [filmList, setFilmList] = React.useState([]);
   const [page, setPage] = useState(generateRandom(0, 100));
   const [currentFilm, setCurrentFilm] = useState();
   const [options, setOptions] = useState([]);
-  const FILM_URL = process.env.REACT_APP_API_URL + "/movie/top_rated?language=en-US&page=" + page + "&api_key=" + process.env.REACT_APP_API_KEY;
+  const { language } = useContext(LanguageSelector);
+  const FILM_URL = process.env.REACT_APP_API_URL + "/movie/top_rated?language=" + language + "&page=" + page + "&api_key=" + process.env.REACT_APP_API_KEY;
   const [currentFilmInfo] = useFetch(process.env.REACT_APP_API_URL + "/movie/" + currentFilm?.id + "?api_key=" + process.env.REACT_APP_API_KEY);
   useEffect(() => {
     fetch(FILM_URL)

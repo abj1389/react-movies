@@ -16,7 +16,7 @@ const Item = ({ item }) => {
         <div className="item__interior-circle" style={{ border: `3px solid ${colorVote}` }}>
           <p className="item__vote">
             {porcentVote}
-            <span className="item__span">%</span>
+            <span className="item__span"></span>
           </p>
         </div>
       </div>
