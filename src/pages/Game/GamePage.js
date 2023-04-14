@@ -1,5 +1,5 @@
 import "./GamePage.scss";
-import { generateRandom } from "../../utils/utils";
+import { generateRandom, formatDate, formatGenres, formatTime } from "../../utils/utils";
 import { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import { FormattedMessage } from "react-intl";
@@ -71,13 +71,9 @@ const GamePage = () => {
           <div className="game-page__text">
             <h3 className="game-page__title">{gameIsSolved ? currentFilm?.title || currentFilm?.name : "?"}</h3>
             <div className="game-page__main-info">
-              <p className="game-page__release-date">{currentFilm?.release_date} | </p>
-              <p className="game-page__genre">
-                {currentFilm?.genres?.map((item) => (
-                  <span key={item.id}> {item?.name},</span>
-                ))}
-              </p>
-              <p className="game-page__time">| {currentFilmInfo?.runtime} min</p>
+              <span>{formatDate(currentFilm?.release_date)} | </span>
+              <span>{formatGenres(currentFilm?.genres)}</span>
+              <span>| {formatTime(currentFilmInfo?.runtime)}</span>
             </div>
             <h3 className="game-page__detail--title">
               <FormattedMessage id="game:first-title" />

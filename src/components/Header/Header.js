@@ -16,7 +16,7 @@ const Header = () => {
             <img className="header__logo-image" src={HeaderLogo} />
           </NavLink>
           <div className="header__links--app">
-            <NavLink className="header__links-link" to="/movie/:movieId">
+            <NavLink className="header__links-link" to="/">
               <FormattedMessage id="general:films" />
             </NavLink>
             <NavLink className="header__links-link" to="/game">

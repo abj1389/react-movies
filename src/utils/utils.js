@@ -48,6 +48,32 @@ export const formatDate = (date) => {
 export const formatGenres = (genres) => {
   if (genres !== undefined) {
     genres = genres.map((genre) => genre.name);
-    return <span>{genres.toString().replaceAll(",", ", ")}</span>;
+    return `${genres.toString().replaceAll(",", ", ")}`;
+  }
+};
+
+export const formatDateWithBarrs = (date) => {
+  if (date !== undefined) {
+    const partes = date.split("-");
+    const dia = partes[2];
+    const mes = partes[1];
+    const anio = partes[0];
+    return `${dia}/${mes}/${anio}`;
+  }
+};
+
+export const formatYear = (date) => {
+  if (date !== undefined) {
+    const year = date.slice(0, 4);
+    return `(${year})`;
+  }
+};
+
+export const getProductionCountriesName = (countries) => {
+  if (countries !== undefined) {
+    const countryNames = countries.map((country) => country.iso_3166_1);
+    const countryNameFormat = ` (${countryNames.join(", ")}) `;
+
+    return countryNameFormat;
   }
 };
