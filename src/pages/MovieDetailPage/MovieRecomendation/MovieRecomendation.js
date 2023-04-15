@@ -1,7 +1,7 @@
 import "./MovieRecomendation.scss";
 import useFetch from "../../../hooks/useFetch";
 import { useParams } from "react-router-dom";
-import RecomendationItem from "../../../components/RecommdationItem/RecomendationItem";
+import RecomendationItem from "../../../components/RecomendationItem/RecomendationItem";
 import { FormattedMessage } from "react-intl";
 
 const MovieRecomendation = () => {

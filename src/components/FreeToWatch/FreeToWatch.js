@@ -1,4 +1,4 @@
-import "./Gratis.scss";
+import "./FreeToWatch.scss";
 import useFetch from "../../hooks/useFetch";
 import { useContext, useState } from "react";
 import Item from "../Item/Item";
@@ -6,7 +6,7 @@ import { usePagination } from "../../hooks/usePaginator";
 import { FormattedMessage } from "react-intl";
 import { LanguageSelector } from "../../App";
 
-const Gratis = () => {
+const FreeToWatch = () => {
   const [optionMedia, setOptionMedia] = useState("movie");
   const { language } = useContext(LanguageSelector);
   const API_URL_WATCH_FREE = process.env.REACT_APP_API_URL + "/discover/" + optionMedia + "?sort_by=release_date.desc&language=" + language + "&page=1&vote_count.gte=1000&vote_average.gte=5&watch_region=ES&with_watch_monetization_types=free&api_key=" + process.env.REACT_APP_API_KEY;
@@ -18,7 +18,7 @@ const Gratis = () => {
     <div className="popular">
       <div className="popular__text">
         <h3 className="popular__title">
-          <FormattedMessage id="gratis:title" />
+          <FormattedMessage id="free-to-watch:title" />
         </h3>
         <div className="popular__buttons">
           <button className="btn popular__btn-time" onClick={() => setOptionMedia("movie")}>
@@ -46,4 +46,4 @@ const Gratis = () => {
   );
 };
 
-export default Gratis;
+export default FreeToWatch;

@@ -1,12 +1,12 @@
 import useFetch from "../../hooks/useFetch";
-import AvancesItem from "../AvancesItem/AvancesItem";
-import "./Avances.scss";
+import TrailersItem from "../TrailersItem/TrailersItem";
+import "./Trailers.scss";
 import { usePagination } from "../../hooks/usePaginator";
 import { FormattedMessage } from "react-intl";
 import { LanguageSelector } from "../../App";
 import { useContext } from "react";
 
-const Avances = () => {
+const Trailers = () => {
   const { language } = useContext(LanguageSelector);
   const API_URL = process.env.REACT_APP_API_URL + "/discover/movie?page=1&release_date.desc&vote_average.gte=5.5&language=" + language + "&api_key=" + process.env.REACT_APP_API_KEY;
   const [discoverData] = useFetch(API_URL);
@@ -15,11 +15,11 @@ const Avances = () => {
   return (
     <div className="discover">
       <h3 className="discover__title">
-        <FormattedMessage id="avances:title" />
+        <FormattedMessage id="trailers:title" />
       </h3>
       <div className="discover__wrapper">
         {firstMovies?.map((item) => (
-          <AvancesItem key={item.id} item={item} />
+          <TrailersItem key={item.id} item={item} />
         ))}
       </div>
       <div className="discover__btn">
@@ -33,4 +33,4 @@ const Avances = () => {
   );
 };
 
-export default Avances;
+export default Trailers;

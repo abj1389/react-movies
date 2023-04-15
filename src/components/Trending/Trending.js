@@ -1,11 +1,11 @@
-import "./Tendencias.scss";
+import "./Trending.scss";
 import useFetch from "../../hooks/useFetch";
 import Item from "../Item/Item";
 import { useState } from "react";
 import { usePagination } from "../../hooks/usePaginator";
 import { FormattedMessage } from "react-intl";
 
-const Tendencias = () => {
+const Trending = () => {
   const [listTimeTrends, setListTimeTrends] = useState("day");
   const API_URL = process.env.REACT_APP_API_URL + "/trending/movie/" + listTimeTrends + `?api_key=${process.env.REACT_APP_API_KEY}`;
   const [movieData] = useFetch(API_URL);
@@ -16,14 +16,14 @@ const Tendencias = () => {
     <div className="trends">
       <div className="trends__text">
         <h3 className="trends__title">
-          <FormattedMessage id="tendencias:title" />
+          <FormattedMessage id="trending:title" />
         </h3>
         <div className="trends__buttons">
           <button onClick={() => setListTimeTrends("day")} className="btn trends__btn-time">
-            <FormattedMessage id="tendencias:today" />
+            <FormattedMessage id="trending:today" />
           </button>
           <button onClick={() => setListTimeTrends("week")} className="btn trends__btn-time">
-            <FormattedMessage id="tendencias:week" />
+            <FormattedMessage id="trending:week" />
           </button>
         </div>
       </div>
@@ -44,4 +44,4 @@ const Tendencias = () => {
   );
 };
 
-export default Tendencias;
+export default Trending;

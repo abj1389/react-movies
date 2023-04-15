@@ -1,0 +1,22 @@
+import { render } from "@testing-library/react";
+import Item from "./Item";
+describe("Item component", () => {
+  let component;
+  let mockItem;
+
+  beforeEach(() => {
+    mockItem = {
+      title: "movie",
+    };
+    component = render(<Item item={{ mockItem }} />);
+  });
+
+  test("Check that item renders correct", () => {
+    const itemElement = component.container.querySelector("div");
+    expect(itemElement).toHaveClass("item");
+  });
+  test("Check that item renders correct", () => {
+    const itemElement = component.container.querySelector("img");
+    expect(itemElement).toHaveClass("item__img");
+  });
+});

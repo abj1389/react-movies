@@ -1,10 +1,10 @@
-import Avances from "../../components/Avances/Avances";
+import Trailers from "../../components/Trailers/Trailers";
 import Popular from "../../components/Popular/Popular";
-import Tendencias from "../../components/Tendencias/Tendencias";
+import Trending from "../../components/Trending/Trending";
 import "./HomePage.scss";
 import HeaderBackground from "../../assets/header-img.png";
 import Unete from "../../assets/unete.png";
-import Gratis from "../../components/Gratis/Gratis";
+import FreeToWatch from "../../components/FreeToWatch/FreeToWatch";
 import Footer from "../../components/Footer/Footer";
 import { FormattedMessage } from "react-intl";
 
@@ -24,8 +24,8 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <Tendencias></Tendencias>
-      <Avances></Avances>
+      <Trending></Trending>
+      <Trailers></Trailers>
       <Popular></Popular>
       <div className="home__background">
         <div className="home__backround-container">
@@ -40,7 +40,7 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-      <Gratis></Gratis>
+      <FreeToWatch></FreeToWatch>
       <Footer></Footer>
     </div>
   );

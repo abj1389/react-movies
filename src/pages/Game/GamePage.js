@@ -15,15 +15,14 @@ const GamePage = () => {
   const [options, setOptions] = useState([]);
   const { language } = useContext(LanguageSelector);
   const FILM_URL = process.env.REACT_APP_API_URL + "/movie/top_rated?language=" + language + "&page=" + page + "&api_key=" + process.env.REACT_APP_API_KEY;
-  const [currentFilmInfo] = useFetch(process.env.REACT_APP_API_URL + "/movie/" + currentFilm?.id + "?api_key=" + process.env.REACT_APP_API_KEY);
+  const [currentFilmInfo] = useFetch(process.env.REACT_APP_API_URL + "/movie/" + currentFilm?.id + "?language=" + language + "&api_key=" + process.env.REACT_APP_API_KEY);
   useEffect(() => {
     fetch(FILM_URL)
       .then((response) => response.json())
       .then((dataParsed) => {
-        // setFilmList(dataParsed.results);
         generateNewGamePlay(dataParsed.results);
       });
-  }, [page]);
+  }, [page, language]);
 
   const generateNewGamePlay = (dataParsed) => {
     const randomIndexes = [];
@@ -70,7 +69,7 @@ const GamePage = () => {
         <div className="game-page__box-1">{gameIsSolved ? <img className="game-page__img" src={`https://image.tmdb.org/t/p/w440_and_h660_face/${currentFilm?.poster_path}`} /> : <ImFilm className="game-page__film-icon" />} </div>
         <div className="game-page__box-2">
           <div className="game-page__text">
-            <h3 className="game-page__title">{gameIsSolved ? currentFilm?.title || currentFilm?.name : "?"}</h3>
+            <h3 className="game-page__title">{gameIsSolved ? currentFilm?.title || currentFilm?.name : "???"}</h3>
             <div className="game-page__main-info">
               <span>{formatDate(currentFilm?.release_date)} | </span>
               <span>{formatGenres(currentFilm?.genres)}</span>
